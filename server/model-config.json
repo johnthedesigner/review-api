@@ -35,5 +35,9 @@
   "thing": {
     "dataSource": "db",
     "public": true
+  },
+  "review": {
+    "dataSource": "db",
+    "public": true
   }
 }
