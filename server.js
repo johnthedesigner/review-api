@@ -7,9 +7,7 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-
-// Models
-//var Widget     = require('./app/models/widget');
+var db         = require('./models/index.js');
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -30,8 +28,15 @@ router.use(function(req, res, next) {
 });
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+// test whether to return JSON or HTML
 router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
+    if(req.accepts('html')){
+      res.json({ message: 'Accepts HTML'});
+    } else if(req.accepts('json')){
+      res.json({ message: 'Accepts JSON'});
+    };
+    // Disable example message
+    //res.json({ message: 'hooray! welcome to our api!' });   
 });
 
 // more routes for our API will happen here
