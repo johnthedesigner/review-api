@@ -39,5 +39,9 @@
   "review": {
     "dataSource": "db",
     "public": true
+  },
+  "reviewer": {
+    "dataSource": "db",
+    "public": true
   }
 }
