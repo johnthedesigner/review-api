@@ -1,37 +1,27 @@
 {
-  "name": "reviewer",
-  "plural": "reviewers",
-  "base": "User",
+  "name": "comment",
+  "plural": "comments",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "username": {
+    "content": {
       "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "comments": {
-      "type": "hasMany",
-      "model": "comment",
+    "reviewer": {
+      "type": "belongsTo",
+      "model": "reviewer",
       "foreignKey": ""
     },
-    "categories": {
-      "type": "hasMany",
-      "model": "category",
-      "foreignKey": ""
-    },
-    "reviews": {
-      "type": "hasMany",
+    "review": {
+      "type": "belongsTo",
       "model": "review",
-      "foreignKey": ""
-    },
-    "things": {
-      "type": "hasMany",
-      "model": "thing",
       "foreignKey": ""
     },
     "flags": {

@@ -30,6 +30,16 @@
       "type": "belongsTo",
       "model": "reviewer",
       "foreignKey": ""
+    },
+    "category": {
+      "type": "belongsTo",
+      "model": "category",
+      "foreignKey": ""
+    },
+    "flags": {
+      "type": "hasMany",
+      "model": "flag",
+      "foreignKey": ""
     }
   },
   "acls": [

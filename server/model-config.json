@@ -43,5 +43,17 @@
   "reviewer": {
     "dataSource": "db",
     "public": true
+  },
+  "category": {
+    "dataSource": "db",
+    "public": true
+  },
+  "comment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "flag": {
+    "dataSource": "db",
+    "public": true
   }
 }

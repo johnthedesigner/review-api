@@ -30,6 +30,16 @@
       "type": "belongsTo",
       "model": "thing",
       "foreignKey": ""
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": ""
+    },
+    "flags": {
+      "type": "hasMany",
+      "model": "flag",
+      "foreignKey": ""
     }
   },
   "acls": [
