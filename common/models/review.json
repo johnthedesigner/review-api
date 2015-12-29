@@ -40,6 +40,11 @@
       "type": "hasMany",
       "model": "flag",
       "foreignKey": ""
+    },
+    "lists": {
+      "type": "hasAndBelongsToMany",
+      "model": "list",
+      "foreignKey": ""
     }
   },
   "acls": [

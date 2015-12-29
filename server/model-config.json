@@ -55,5 +55,13 @@
   "flag": {
     "dataSource": "db",
     "public": true
+  },
+  "list": {
+    "dataSource": "db",
+    "public": true
+  },
+  "like": {
+    "dataSource": "db",
+    "public": true
   }
 }
