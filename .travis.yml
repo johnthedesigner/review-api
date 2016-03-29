@@ -1,3 +1,10 @@
 language: node_js
 node_js:
-  - "0.12"
+- '0.12'
+deploy:
+  provider: heroku
+  api_key:
+    secure: ScsDScbN9SV3VVzFFROjKddcm483k1AJzJPNNtqJlEhX0mkKzTskCynR9IeBxP4DGJUtqWjBct38/cTji75Na002H0XbxMYWgjm64z+g0koUb7Xz//RKEjJpWlpdVBlqo/sOYqGS58uTLYUbr8aFzo5xWqEPvunpz6/mpy1wM/EaFxaafxUEDkmoB7uDAsUllJzajma8RHcMyfTOqmdfOYDK3Zy8KSKZ1S6IkNEfK5LFnr9P0MLjNhhLxDxR3Pi7tcGRD/qvqsJ1GZYNmWlbvub6ev/MYcB4OAC638Xwpf0jeUqppnxVmDU/GAuXgMQpJz8qQkhI7H4DyMx34XUCRF0CCYhcUK9gkk2i/zFuu6WwBB0XZSUO5b2uqgdCyWdm7gdHqCQHE4hvJfRa8I9ghsMJLScUTJ9/b2yGB/mei19KNrF9rQN8t5nMhhPDN9eIFpQtzjlxKmbr+b8HwOuQOQwpK/cfwvWX/g8WU+PBiI0zLd8qP02pjOzqHr5KFzCvEGKJmzLW1CA8rVFiG7XwM0L9JRPWczXZomWuu3QXApMKHzFHCxvUCJtMjjSg+JpqavTA4EzjjvCeJ96stIeDVNnBKQU0nAeaFMq+BxqQnKgCWcfbfIO1PSKFLc9X22bCmRY0Hj6Zc1rAv/BjyK9nLD8mleWdWJnYiOGGUqPG5k8=
+  app: review-api
+  on:
+    repo: johnthedesigner/review-api
