@@ -1,0 +1,45 @@
+{
+  "name": "reviewer",
+  "plural": "reviewers",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "comments": {
+      "type": "hasMany",
+      "model": "comment",
+      "foreignKey": ""
+    },
+    "categories": {
+      "type": "hasMany",
+      "model": "category",
+      "foreignKey": ""
+    },
+    "reviews": {
+      "type": "hasMany",
+      "model": "review",
+      "foreignKey": ""
+    },
+    "things": {
+      "type": "hasMany",
+      "model": "thing",
+      "foreignKey": ""
+    },
+    "flags": {
+      "type": "hasMany",
+      "model": "flag",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

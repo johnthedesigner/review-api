@@ -1,0 +1,45 @@
+{
+  "name": "like",
+  "plural": "likes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "reviews": {
+      "type": "hasOne",
+      "model": "review",
+      "foreignKey": ""
+    },
+    "reviewer": {
+      "type": "belongsTo",
+      "model": "reviewer",
+      "foreignKey": ""
+    },
+    "reviewers": {
+      "type": "hasOne",
+      "model": "reviewer",
+      "foreignKey": ""
+    },
+    "lists": {
+      "type": "hasOne",
+      "model": "list",
+      "foreignKey": ""
+    },
+    "categories": {
+      "type": "hasOne",
+      "model": "category",
+      "foreignKey": ""
+    },
+    "things": {
+      "type": "hasOne",
+      "model": "thing",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
