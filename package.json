@@ -2,6 +2,7 @@
   "name": "review-api",
   "version": "1.0.0",
   "main": "server/server.js",
+  "start": "node server/server.js",
   "scripts": {
     "pretest": "jshint ."
   },
