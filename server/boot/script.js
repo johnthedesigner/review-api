@@ -4,10 +4,13 @@ module.exports = function(app) {
   var RoleMapping = app.models.RoleMapping;
   var Team = app.models.Team;
 
-
   Reviewer.create([
-      {username: 'JTD', email: 'john@johnthedesigner.com', password: 'password'}
-  ], function(err, users) {
+      {
+        username: "JTD",
+        email: "john@johnthedesigner.com",
+        password: "password"
+      }
+  ], function(err, reviewers) {
     if (err) throw err;
 
     // Create the admin role
@@ -19,7 +22,7 @@ module.exports = function(app) {
       // Make JTD an admin
       role.principals.create({
         principalType: RoleMapping.USER,
-        principalId: users[0].id
+        principalId: reviewers[0].id
       }, function(err, principal) {
         if (err) throw err;
       });

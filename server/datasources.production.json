@@ -1,13 +1,7 @@
 {
   "db": {
     "name": "db",
-    "connector": "postgresql",
-    "host": "ec2-54-235-199-36.compute-1.amazonaws.com",
-    "port": 5432,
-    "database": "da8gihpo419f4b",
-    "username": "mmpmvporkoudbt",
-    "password": "QlR9pX0iXE10Fe3QUu_pNLoMFU",
-    "url": "$PROD_DB_PATH",
-    "ssl": true
+    "connector": "memory",
+    "file": "appData.json"
   }
 }
