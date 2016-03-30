@@ -7,6 +7,7 @@
     "database": "da8gihpo419f4b",
     "username": "mmpmvporkoudbt",
     "password": "QlR9pX0iXE10Fe3QUu_pNLoMFU",
+    "url": "$PROD_DB_PATH",
     "ssl": true
   }
 }
