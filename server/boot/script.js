@@ -6,9 +6,9 @@ module.exports = function(app) {
 
   Reviewer.create([
       {
-        username: "JTD",
-        email: "john@johnthedesigner.com",
-        password: "password"
+        username: 'JTD',
+        email: 'john@johnthedesigner.com',
+        password: 'password'
       }
   ], function(err, reviewers) {
     if (err) throw err;
