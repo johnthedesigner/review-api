@@ -17,13 +17,11 @@ module.exports = function(app) {
       }
   ], function(err, reviewer) {
     if (err) throw err;
-
     // Create the admin role
     Role.create({
       name: 'admin'
     }, function(err, role) {
       if (err) throw err;
-      console.log(reviewer);
       // Make JTD an admin
       role.principals.create({
         principalType: RoleMapping.USER,
