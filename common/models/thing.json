@@ -24,7 +24,7 @@
     "reviews": {
       "type": "hasMany",
       "model": "review",
-      "foreignKey": ""
+      "foreignKey": "thingId"
     },
     "reviewer": {
       "type": "belongsTo",
