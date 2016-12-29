@@ -2,11 +2,16 @@
   "name": "thing",
   "plural": "things",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "id": true,
+      "type": "string",
+      "defaultFn": "guid"
+    },
     "name": {
       "type": "string",
       "required": true
@@ -16,6 +21,11 @@
     },
     "status": {
       "type": "string",
+      "required": true
+    },
+    "createdDate": {
+      "type": "date",
+      "defaultFn": "now",
       "required": true
     }
   },

@@ -2,11 +2,16 @@
   "name": "review",
   "plural": "reviews",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "id": true,
+      "type": "string",
+      "defaultFn": "guid"
+    },
     "title": {
       "type": "string",
       "required": true
@@ -16,6 +21,11 @@
     },
     "rating": {
       "type": "number",
+      "required": true
+    },
+    "createdDate": {
+      "type": "date",
+      "defaultFn": "now",
       "required": true
     }
   },
