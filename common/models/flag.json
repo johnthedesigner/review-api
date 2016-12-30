@@ -7,8 +7,18 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "id": true,
+      "type": "string",
+      "defaultFn": "guid"
+    },
     "type": {
       "type": "string",
+      "required": true
+    },
+    "createdDate": {
+      "type": "date",
+      "defaultFn": "now",
       "required": true
     }
   },
