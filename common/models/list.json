@@ -35,6 +35,11 @@
       "type": "hasAndBelongsToMany",
       "model": "review",
       "foreignKey": ""
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "like",
+      "foreignKey": ""
     }
   },
   "acls": [

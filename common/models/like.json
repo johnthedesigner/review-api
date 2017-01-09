@@ -20,7 +20,7 @@
   },
   "validations": [],
   "relations": {
-    "reviews": {
+    "review": {
       "type": "hasOne",
       "model": "review",
       "foreignKey": ""
@@ -30,22 +30,17 @@
       "model": "reviewer",
       "foreignKey": ""
     },
-    "reviewers": {
-      "type": "hasOne",
-      "model": "reviewer",
-      "foreignKey": ""
-    },
-    "lists": {
+    "list": {
       "type": "hasOne",
       "model": "list",
       "foreignKey": ""
     },
-    "categories": {
+    "category": {
       "type": "hasOne",
       "model": "category",
       "foreignKey": ""
     },
-    "things": {
+    "thing": {
       "type": "hasOne",
       "model": "thing",
       "foreignKey": ""

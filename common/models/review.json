@@ -51,6 +51,11 @@
       "model": "flag",
       "foreignKey": ""
     },
+    "likes": {
+      "type": "hasMany",
+      "model": "like",
+      "foreignKey": ""
+    },
     "lists": {
       "type": "hasAndBelongsToMany",
       "model": "list",

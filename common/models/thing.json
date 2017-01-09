@@ -46,6 +46,11 @@
       "model": "category",
       "foreignKey": ""
     },
+    "likes": {
+      "type": "hasMany",
+      "model": "like",
+      "foreignKey": ""
+    },
     "flags": {
       "type": "hasMany",
       "model": "flag",
