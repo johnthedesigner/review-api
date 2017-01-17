@@ -32,9 +32,10 @@
   "validations": [],
   "relations": {
     "reviews": {
-      "type": "hasAndBelongsToMany",
+      "type": "hasMany",
       "model": "review",
-      "foreignKey": ""
+      "foreignKey": "listId",
+      "through": "listReview"
     },
     "likes": {
       "type": "hasMany",
