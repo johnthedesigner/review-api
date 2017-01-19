@@ -1,6 +1,6 @@
 {
-  "name": "listReview",
-  "plural": "listReviews",
+  "name": "listThing",
+  "plural": "listThings",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -22,8 +22,8 @@
   "relations": {
     "review": {
       "type": "belongsTo",
-      "model": "review",
-      "foreignKey": "reviewId"
+      "model": "thing",
+      "foreignKey": "thingId"
     },
     "list": {
       "type": "belongsTo",

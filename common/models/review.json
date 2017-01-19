@@ -55,12 +55,6 @@
       "type": "hasMany",
       "model": "like",
       "foreignKey": ""
-    },
-    "lists": {
-      "type": "hasMany",
-      "model": "list",
-      "foreignKey": "reviewId",
-      "through": "listReview"
     }
   },
   "acls": [

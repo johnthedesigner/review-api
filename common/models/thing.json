@@ -55,6 +55,12 @@
       "type": "hasMany",
       "model": "flag",
       "foreignKey": ""
+    },
+    "lists": {
+      "type": "hasMany",
+      "model": "list",
+      "foreignKey": "thingId",
+      "through": "listThing"
     }
   },
   "acls": [

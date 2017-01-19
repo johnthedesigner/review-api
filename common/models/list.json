@@ -31,11 +31,11 @@
   },
   "validations": [],
   "relations": {
-    "reviews": {
+    "things": {
       "type": "hasMany",
-      "model": "review",
+      "model": "thing",
       "foreignKey": "listId",
-      "through": "listReview"
+      "through": "listThing"
     },
     "likes": {
       "type": "hasMany",
