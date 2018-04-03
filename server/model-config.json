@@ -63,5 +63,9 @@
   "like": {
     "dataSource": "db",
     "public": true
+  },
+  "listThing": {
+    "dataSource": "db",
+    "public": true
   }
 }

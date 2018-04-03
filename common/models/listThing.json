@@ -1,6 +1,6 @@
 {
-  "name": "review",
-  "plural": "reviews",
+  "name": "listThing",
+  "plural": "listThings",
   "base": "PersistedModel",
   "idInjection": false,
   "options": {
@@ -12,17 +12,6 @@
       "type": "string",
       "defaultFn": "guid"
     },
-    "title": {
-      "type": "string",
-      "required": true
-    },
-    "content": {
-      "type": "string"
-    },
-    "rating": {
-      "type": "number",
-      "required": true
-    },
     "createdDate": {
       "type": "date",
       "defaultFn": "now",
@@ -31,30 +20,15 @@
   },
   "validations": [],
   "relations": {
-    "reviewer": {
-      "type": "belongsTo",
-      "model": "reviewer",
-      "foreignKey": ""
-    },
-    "thing": {
+    "review": {
       "type": "belongsTo",
       "model": "thing",
-      "foreignKey": ""
+      "foreignKey": "thingId"
     },
-    "comments": {
-      "type": "hasMany",
-      "model": "comment",
-      "foreignKey": ""
-    },
-    "flags": {
-      "type": "hasMany",
-      "model": "flag",
-      "foreignKey": ""
-    },
-    "likes": {
-      "type": "hasMany",
-      "model": "like",
-      "foreignKey": ""
+    "list": {
+      "type": "belongsTo",
+      "model": "list",
+      "foreignKey": "listId"
     }
   },
   "acls": [

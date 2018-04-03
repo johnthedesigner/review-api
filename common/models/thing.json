@@ -2,11 +2,16 @@
   "name": "thing",
   "plural": "things",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "id": true,
+      "type": "string",
+      "defaultFn": "guid"
+    },
     "name": {
       "type": "string",
       "required": true
@@ -17,6 +22,11 @@
     "status": {
       "type": "string",
       "required": true
+    },
+    "createdDate": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
     }
   },
   "validations": [],
@@ -24,7 +34,7 @@
     "reviews": {
       "type": "hasMany",
       "model": "review",
-      "foreignKey": ""
+      "foreignKey": "thingId"
     },
     "reviewer": {
       "type": "belongsTo",
@@ -36,10 +46,21 @@
       "model": "category",
       "foreignKey": ""
     },
+    "likes": {
+      "type": "hasMany",
+      "model": "like",
+      "foreignKey": ""
+    },
     "flags": {
       "type": "hasMany",
       "model": "flag",
       "foreignKey": ""
+    },
+    "lists": {
+      "type": "hasMany",
+      "model": "list",
+      "foreignKey": "thingId",
+      "through": "listThing"
     }
   },
   "acls": [

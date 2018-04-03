@@ -2,11 +2,16 @@
   "name": "reviewer",
   "plural": "reviewers",
   "base": "User",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "id": true,
+      "type": "string",
+      "defaultFn": "guid"
+    },
     "username": {
       "type": "string",
       "required": true
@@ -32,6 +37,11 @@
     "things": {
       "type": "hasMany",
       "model": "thing",
+      "foreignKey": ""
+    },
+    "likes": {
+      "type": "hasMany",
+      "model": "like",
       "foreignKey": ""
     },
     "flags": {

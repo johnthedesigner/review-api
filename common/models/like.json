@@ -2,15 +2,26 @@
   "name": "like",
   "plural": "likes",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "id": {
+      "id": true,
+      "type": "string",
+      "defaultFn": "guid"
+    },
+    "createdDate": {
+      "type": "date",
+      "defaultFn": "now",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {
-    "reviews": {
-      "type": "hasOne",
+    "review": {
+      "type": "belongsTo",
       "model": "review",
       "foreignKey": ""
     },
@@ -19,27 +30,48 @@
       "model": "reviewer",
       "foreignKey": ""
     },
-    "reviewers": {
-      "type": "hasOne",
-      "model": "reviewer",
-      "foreignKey": ""
-    },
-    "lists": {
-      "type": "hasOne",
+    "list": {
+      "type": "belongsTo",
       "model": "list",
       "foreignKey": ""
     },
-    "categories": {
-      "type": "hasOne",
+    "category": {
+      "type": "belongsTo",
       "model": "category",
       "foreignKey": ""
     },
-    "things": {
-      "type": "hasOne",
+    "thing": {
+      "type": "belongsTo",
       "model": "thing",
       "foreignKey": ""
     }
   },
-  "acls": [],
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "READ",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
   "methods": {}
 }
