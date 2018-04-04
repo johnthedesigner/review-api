@@ -23,13 +23,13 @@
       "type": "string",
       "required": true
     },
-    "props": {
-      "type": "object",
-      "required": true
-    },
     "createdDate": {
       "type": "date",
       "defaultFn": "now",
+      "required": true
+    },
+    "reviewerId": {
+      "type": "string",
       "required": true
     }
   },
@@ -37,11 +37,6 @@
   "relations": {
     "parent": {
       "type": "belongsTo",
-      "model": "category",
-      "foreignKey": ""
-    },
-    "children": {
-      "type": "hasMany",
       "model": "category",
       "foreignKey": ""
     },
@@ -53,7 +48,7 @@
     "reviewer": {
       "type": "belongsTo",
       "model": "reviewer",
-      "foreignKey": ""
+      "foreignKey": "reviewerId"
     },
     "flags": {
       "type": "hasMany",

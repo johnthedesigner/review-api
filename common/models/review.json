@@ -12,12 +12,9 @@
       "type": "string",
       "defaultFn": "guid"
     },
-    "title": {
+    "content": {
       "type": "string",
       "required": true
-    },
-    "content": {
-      "type": "string"
     },
     "rating": {
       "type": "number",
@@ -27,6 +24,14 @@
       "type": "date",
       "defaultFn": "now",
       "required": true
+    },
+    "reviewerId": {
+      "type": "string",
+      "required": true
+    },
+    "thingId": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
@@ -34,12 +39,12 @@
     "reviewer": {
       "type": "belongsTo",
       "model": "reviewer",
-      "foreignKey": ""
+      "foreignKey": "reviewerId"
     },
     "thing": {
       "type": "belongsTo",
       "model": "thing",
-      "foreignKey": ""
+      "foreignKey": "thingId"
     },
     "comments": {
       "type": "hasMany",

@@ -1,3 +1,1 @@
-module.exports = function(ListThing) {
-
-};
+module.exports = function(ListThing) {};

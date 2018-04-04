@@ -1,3 +1,1 @@
-module.exports = function(Reviewer) {
-
-};
+module.exports = function(Reviewer) {};

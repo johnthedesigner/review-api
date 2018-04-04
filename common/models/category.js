@@ -1,3 +1,1 @@
-module.exports = function(Category) {
-
-};
+module.exports = function(Category) {};
