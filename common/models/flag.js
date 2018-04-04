@@ -1,3 +1,1 @@
-module.exports = function(Flag) {
-
-};
+module.exports = function(Flag) {};

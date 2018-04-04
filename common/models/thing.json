@@ -27,6 +27,14 @@
       "type": "date",
       "defaultFn": "now",
       "required": true
+    },
+    "reviewerId": {
+      "type": "string",
+      "required": true
+    },
+    "categoryId": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
@@ -39,12 +47,12 @@
     "reviewer": {
       "type": "belongsTo",
       "model": "reviewer",
-      "foreignKey": ""
+      "foreignKey": "reviewerId"
     },
     "category": {
       "type": "belongsTo",
       "model": "category",
-      "foreignKey": ""
+      "foreignKey": "categoryId"
     },
     "likes": {
       "type": "hasMany",

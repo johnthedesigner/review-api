@@ -1,3 +1,1 @@
-module.exports = function(Like) {
-
-};
+module.exports = function(Like) {};
